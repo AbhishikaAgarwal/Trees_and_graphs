@@ -1,0 +1,57 @@
+##Trees
+
+Trees are used to represent hierarchical data like an organisational and folder structure.
+Used to define dependencies
+Trees can be implemented using either array or linked list
+
+##Binary Tree
+
+Searching, insertion and deletion in moderate time
+No upper limit for the number of elements
+
+## Traversals
+1) Depth First Search
+** Pre Order traversal
+** Post Order traversal
+** In Order traversal
+
+2) Breadth First Search or level order traversal
+
+#include<iostream>
+using namespace std;
+
+struct node{
+int data;
+node *left;
+node *right;
+};
+
+node* addnode(int data){
+node *newnode = new node();
+newnode-> data = data;
+newnode->left = newnode->right = NULL;
+}
+
+void preorder(node *root)
+{
+if(root == NULL)
+return;
+
+cout<<root-> data;
+preorder(root-> left);
+preorder(root-> right);
+
+}
+
+int main()
+{
+node *root = addnode(1);
+root -> left = addnode(2);
+root -> right = addnode(3);
+root -> left -> left = addnode(4);
+root -> left -> right = addnode(5);
+root -> right -> left = addnode(6);
+root -> right -> right = addnode(7);
+
+preorder(root);
+}
