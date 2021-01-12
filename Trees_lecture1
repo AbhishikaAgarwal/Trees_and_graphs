@@ -10,12 +10,12 @@ Searching, insertion and deletion in moderate time
 No upper limit for the number of elements
 
 ## Traversals
-1) Depth First Search
+1) Depth First Search ( Use a stack either a recursive call stack or a normal stack data structures )
 ** Pre Order traversal
 ** Post Order traversal
 ** In Order traversal
 
-2) Breadth First Search or level order traversal
+2) Breadth First Search or level order traversal ( Use a queue data structure )
 
 #include<iostream>
 using namespace std;
