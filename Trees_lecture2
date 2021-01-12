@@ -33,6 +33,15 @@ void inorder(node *root){
     inorder(root->right);
 }
 
+void postorder(node *root)
+{
+if(root == NULL)
+return;
+postorder(root->left);
+postorder(root->right);
+cout<<root->data<<" ";
+}
+
 int main()
 {
 node *root = addnode(1);
@@ -43,6 +52,13 @@ root -> left -> right = addnode(5);
 root -> right -> left = addnode(6);
 root -> right -> right = addnode(7);
 
+cout<<"PreOrder"<<endl;
 preorder(root);
+cout<<endl;
+cout<<"InOrder"<<endl;
 inorder(root);
+cout<<endl;
+cout<<"PostOrder"<<endl;
+postorder(root);
+cout<<endl;
 }
